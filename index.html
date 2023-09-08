@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adatváltás</title>
+    <script src="n.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form>
+        <label for="dataAmount">Adatmennyiség</label>
+        <input type="number" name="num" id="dataAmount">
+        <select name="dataType" id="ID_dataType">
+            <option value="KB">KB</option>
+            <option value="MB" selected>MB</option>
+            <option value="GB">GB</option>
+            <option value="TB">TB</option>
+        </select> <br>
+        <label for="transferSpeed">Átviteli sebesség</label>
+        <input type="range" name="ts" id="transferSpeed" min="10"
+         max="5000" onchange="Update()" value="10" >
+         <span id="sliValue">10</span>
+         <select name="dataType2" id="ID_dataType2">
+            <option value="KBps">KBps</option>
+            <option value="MBps" selected>MBps</option>
+            <option value="GBps">GBps</option>
+        </select> <br>
+        <input type="button" value="Számol" onclick="Szamol()"> <br>
+        <label id="kiiras"></label> <span>Sec</span>
+    </form>
+</body>
+</html>
